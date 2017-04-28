@@ -33,6 +33,7 @@ public class GrannyControls2 : MonoBehaviour {
         {
             anim.SetTrigger("isFalling");
             rb.transform.Rotate(Vector3.right * 180 * Time.deltaTime);
+            rb.MovePosition(transform.position + Vector3.down * 2 * Time.deltaTime);
             source.PlayOneShot(fallSound, 1f);
         }
         if (Vector3.Distance(transform.position, elvis.transform.position) < 5f)
